@@ -32,16 +32,15 @@ public class NumbersActivity extends AppCompatActivity {
         //get the rootview
         LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
         //loop from index 0 to 9,
-        int index = 0;
-        while (index < 10) {
+
+        for (int index = 0; index < words.size(); index++) {
             //create a new textView for each index
             TextView numberView = new TextView(this);
             //and add the corresponding number text to the textViews
             numberView.setText(words.get(index));
+            numberView.setId(index);
             //add current TextView to the end of rootview as a childview
             rootView.addView(numberView);
-            //increment index
-            index++;
         }
     }
 }
