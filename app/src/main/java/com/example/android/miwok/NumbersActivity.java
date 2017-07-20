@@ -3,10 +3,15 @@ package com.example.android.miwok;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class NumbersActivity extends AppCompatActivity {
@@ -15,9 +20,10 @@ public class NumbersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
-        ArrayList<String> words = new ArrayList<String>() {
+        Word elso = new Word("egy", "ketto");
+        ArrayList<Word> words = new ArrayList<Word>() {
             {
-                add("one");
+                add(new Word("sdf", "fds"));
                 add("two");
                 add("three");
                 add("four");
@@ -29,18 +35,10 @@ public class NumbersActivity extends AppCompatActivity {
                 add("ten");
             }
         };
-        //get the rootview
-        LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
-        //loop from index 0 to 9,
 
-        for (int index = 0; index < words.size(); index++) {
-            //create a new textView for each index
-            TextView numberView = new TextView(this);
-            //and add the corresponding number text to the textViews
-            numberView.setText(words.get(index));
-            numberView.setId(index);
-            //add current TextView to the end of rootview as a childview
-            rootView.addView(numberView);
-        }
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
+
+        ListView listView = (ListView) findViewById(R.id.list);
+        listView.setAdapter(itemsAdapter);
     }
 }
