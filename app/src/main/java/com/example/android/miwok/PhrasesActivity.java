@@ -2,16 +2,9 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class PhrasesActivity extends AppCompatActivity {
@@ -19,15 +12,19 @@ public class PhrasesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.words_list);
         ArrayList<Word> words = new ArrayList<Word>() {
             {
-                add(new Word("sdf", "fds"));
-                add(new Word("srecd", "rybgfvs"));
-                add(new Word("jmnhdcf", "yujkys"));
-                add(new Word("ssdjy", "ewrws"));
-                add(new Word("kjhf", "fdasd"));
-
+                add(new Word("Where are you going?", "minto wuksus"));
+                add(new Word("What is your name?", "tinnә oyaase'nә"));
+                add(new Word("My name is...", "oyaaset..."));
+                add(new Word("How are you feeling?", "michәksәs?"));
+                add(new Word("I’m feeling good.", "kuchi achit"));
+                add(new Word("Are you coming?", "әәnәs'aa?"));
+                add(new Word("Yes, I’m coming.", "hәә’ әәnәm"));
+                add(new Word("I’m coming.", "әәnәm"));
+                add(new Word("Let’s go.", "yoowutis"));
+                add(new Word("Come here.", "әnni'nem"));
             }
         };
 

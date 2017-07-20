@@ -2,16 +2,9 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class NumbersActivity extends AppCompatActivity {
@@ -19,15 +12,19 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.words_list);
         ArrayList<Word> words = new ArrayList<Word>() {
             {
-                add(new Word("sdf", "fds"));
-                add(new Word("srecd", "rybgfvs"));
-                add(new Word("jmnhdcf", "yujkys"));
-                add(new Word("ssdjy", "ewrws"));
-                add(new Word("kjhf", "fdasd"));
-
+                add(new Word("one", "lutti"));
+                add(new Word("two", "otiiko"));
+                add(new Word("three", "tolookosu"));
+                add(new Word("four", "oyyisa"));
+                add(new Word("five", "massokka"));
+                add(new Word("six", "temmokka"));
+                add(new Word("seven", "kenekaku"));
+                add(new Word("eight", "kawinta"));
+                add(new Word("nine", "wo’e"));
+                add(new Word("ten", "na’aacha"));
             }
         };
 

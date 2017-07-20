@@ -2,16 +2,9 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class ColorsActivity extends AppCompatActivity {
@@ -19,14 +12,19 @@ public class ColorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.words_list);
         ArrayList<Word> words = new ArrayList<Word>() {
             {
-                add(new Word("sdf", "fds"));
-                add(new Word("srecd", "rybgfvs"));
-                add(new Word("jmnhdcf", "yujkys"));
-                add(new Word("ssdjy", "ewrws"));
-                add(new Word("kjhf", "fdasd"));
+                add(new Word("red", "weṭeṭṭi"));
+                add(new Word("green", "chokokki"));
+                add(new Word("brown", "ṭakaakki"));
+                add(new Word("gray", "ṭopoppi"));
+                add(new Word("black", "kululli"));
+                add(new Word("white", "kelelli"));
+                add(new Word("older sister", "teṭe"));
+                add(new Word("dusty yellow", "ṭopiisә"));
+                add(new Word("grandmother", "ama"));
+                add(new Word("mustard yellow", "chiwiiṭә"));
 
             }
         };
