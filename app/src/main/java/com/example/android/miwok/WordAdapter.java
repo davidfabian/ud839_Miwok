@@ -1,11 +1,13 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -36,6 +38,12 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         // Get the {@link Word} object located at this position in the list
         Word currentWord = getItem(position);
+
+        // Find the TextView in the list_item.xml layout with the ID miwok_translation
+        ImageView image = (ImageView) listItemView.findViewById(R.id.image);
+        // Get the miwok translation of the current word object
+        // set this text on the number TextView
+        image.setImageResource(currentWord.getImageREsourceId());
 
         // Find the TextView in the list_item.xml layout with the ID default_translation
         TextView defaultTranslationTextView = (TextView) listItemView.findViewById(R.id.default_translation);
