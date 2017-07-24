@@ -1,6 +1,8 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
+import android.content.res.AssetFileDescriptor;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.text.Layout;
@@ -14,6 +16,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static com.example.android.miwok.R.id.parent;
+
 /**
  * Created by d on 20/07/2017.
  */
@@ -22,6 +26,8 @@ import java.util.ArrayList;
 public class WordAdapter extends ArrayAdapter<Word> {
     //create variable for color input parameter, initialize with default value.
     private int mColorCode = R.color.category_numbers;
+    private int mSoundAdd;
+
 
     public WordAdapter(Activity context, ArrayList<Word> words, int categoryColor) {
 
@@ -32,12 +38,13 @@ public class WordAdapter extends ArrayAdapter<Word> {
         super(context, 0, words);
 
         mColorCode = categoryColor;
+
     }
 
 
     @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, final ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if (listItemView == null) {
@@ -46,8 +53,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
         // Get the {@link Word} object located at this position in the list
-        Word currentWord = getItem(position);
-
+        final Word currentWord = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID miwok_translation
         ImageView image = (ImageView) listItemView.findViewById(R.id.image);
@@ -79,10 +85,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // set this text on the number TextView
         miwokTranslationTextView.setText(currentWord.getMiwokTranslation());
 
-
         // Return the whole list item layout (containing 2 TextViews )
         // so that it can be shown in the ListView
         return listItemView;
     }
-
 }

@@ -10,12 +10,13 @@ public class Word {
     private String mDefaultTranslation;
     private String mMiwokTranslation;
     private int mImage = NO_IMAGE;
+    private int mSound;
 
-
-    public Word(String defaultTranslation, String miwokTranslation, int image) {
+    public Word(String defaultTranslation, String miwokTranslation, int image, int sound) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImage = image;
+        mSound = sound;
     }
 
     public Word(String defaultTranslation, String miwokTranslation) {
@@ -23,6 +24,11 @@ public class Word {
         mMiwokTranslation = miwokTranslation;
     }
 
+    public Word(String defaultTranslation, String miwokTranslation, int sound) {
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+        mSound = sound;
+    }
     /**
      * get default translation
      *
@@ -58,5 +64,14 @@ public class Word {
      */
     public boolean hasImage() {
         return mImage != NO_IMAGE;
+    }
+
+    /**
+     * returns the soundfile address.
+     *
+     * @return sound file address
+     */
+    public int getmSound() {
+        return mSound;
     }
 }
