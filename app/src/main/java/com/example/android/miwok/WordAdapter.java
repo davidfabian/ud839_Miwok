@@ -42,9 +42,11 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         // Find the TextView in the list_item.xml layout with the ID miwok_translation
         ImageView image = (ImageView) listItemView.findViewById(R.id.image);
-        if (currentWord.getImageREsourceId() != 0) {
-            // Get the miwok translation of the current word object
-            // set this text on the number TextView
+
+        //checks if there is image in this instance, and displays image only if it is present. Otherwise sets visibility to GONE
+        if (currentWord.hasImage()) {
+            // Get the image of the current word object
+            // set this image address on the image ImageView
             image.setImageResource(currentWord.getImageREsourceId());
             image.setVisibility(View.VISIBLE);
         } else {

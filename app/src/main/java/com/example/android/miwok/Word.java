@@ -6,9 +6,10 @@ package com.example.android.miwok;
  */
 
 public class Word {
+    private static int NO_IMAGE = -1;
     private String mDefaultTranslation;
     private String mMiwokTranslation;
-    private int mImage;
+    private int mImage = NO_IMAGE;
 
 
     public Word(String defaultTranslation, String miwokTranslation, int image) {
@@ -40,7 +41,22 @@ public class Word {
         return mMiwokTranslation;
     }
 
+    /**
+     * returns the image address. default value is out of range
+     *
+     * @return image address
+     */
+
     public int getImageREsourceId() {
         return mImage;
+    }
+
+    /**
+     * returns if the instance has an image
+     *
+     * @return TRUE if image is present, FALSE if not.
+     */
+    public boolean hasImage() {
+        return mImage != NO_IMAGE;
     }
 }
