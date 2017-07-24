@@ -3,11 +3,13 @@ package com.example.android.miwok;
 import android.app.Activity;
 import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,15 +18,22 @@ import java.util.ArrayList;
  * Created by d on 20/07/2017.
  */
 
+
 public class WordAdapter extends ArrayAdapter<Word> {
-    public WordAdapter(Activity context, ArrayList<Word> words) {
+    //create variable for color input parameter, initialize with default value.
+    private int mColorCode = R.color.category_numbers;
+
+    public WordAdapter(Activity context, ArrayList<Word> words, int categoryColor) {
 
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews, the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0.
         super(context, 0, words);
+
+        mColorCode = categoryColor;
     }
+
 
     @NonNull
     @Override
@@ -52,6 +61,11 @@ public class WordAdapter extends ArrayAdapter<Word> {
         } else {
             image.setVisibility(View.GONE);
         }
+        /**
+         * finds the vertical linear layout holding the textviews and setting background color to the passed argument.
+         */
+        LinearLayout texts = (LinearLayout) listItemView.findViewById(R.id.vertical_linear_textview);
+        texts.setBackgroundResource(mColorCode);
 
         // Find the TextView in the list_item.xml layout with the ID default_translation
         TextView defaultTranslationTextView = (TextView) listItemView.findViewById(R.id.default_translation);
@@ -64,6 +78,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Get the miwok translation of the current word object
         // set this text on the number TextView
         miwokTranslationTextView.setText(currentWord.getMiwokTranslation());
+
 
         // Return the whole list item layout (containing 2 TextViews )
         // so that it can be shown in the ListView
