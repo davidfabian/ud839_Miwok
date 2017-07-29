@@ -32,4 +32,10 @@
 
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/play_arrow"
+        style="@style/play_arrow"
+
+        android:src="@drawable/ic_play" />
 </LinearLayout>
