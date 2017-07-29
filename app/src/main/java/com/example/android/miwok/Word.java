@@ -74,4 +74,14 @@ public class Word {
     public int getmSound() {
         return mSound;
     }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mImage=" + mImage +
+                ", mSound=" + mSound +
+                '}';
+    }
 }
