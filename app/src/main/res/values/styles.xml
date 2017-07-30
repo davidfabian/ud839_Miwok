@@ -71,4 +71,11 @@
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:padding">16dp</item>
     </style>
+
+    <style name="tab_labels">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:padding">16dp</item>
+    </style>
 </resources>
