@@ -15,7 +15,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-public class NumbersFragment extends Fragment {
+public class ColorsFragment extends Fragment {
 
     //create mediaplayer
     private MediaPlayer mMediaPlayer;
@@ -98,20 +98,19 @@ public class NumbersFragment extends Fragment {
 
         final ArrayList<Word> words = new ArrayList<Word>() {
             {
-                add(new Word("one", "lutti", R.drawable.number_one, R.raw.number_one));
-                add(new Word("two", "otiiko", R.drawable.number_two, R.raw.number_two));
-                add(new Word("three", "tolookosu", R.drawable.number_three, R.raw.number_three));
-                add(new Word("four", "oyyisa", R.drawable.number_four, R.raw.number_four));
-                add(new Word("five", "massokka", R.drawable.number_five, R.raw.number_five));
-                add(new Word("six", "temmokka", R.drawable.number_six, R.raw.number_six));
-                add(new Word("seven", "kenekaku", R.drawable.number_seven, R.raw.number_seven));
-                add(new Word("eight", "kawinta", R.drawable.number_eight, R.raw.number_eight));
-                add(new Word("nine", "wo’e", R.drawable.number_nine, R.raw.number_nine));
-                add(new Word("ten", "na’aacha", R.drawable.number_ten, R.raw.number_ten));
+                add(new Word("red", "weṭeṭṭi", R.drawable.color_red, R.raw.color_red));
+                add(new Word("green", "chokokki", R.drawable.color_green, R.raw.color_green));
+                add(new Word("brown", "ṭakaakki", R.drawable.color_brown, R.raw.color_brown));
+                add(new Word("gray", "ṭopoppi", R.drawable.color_gray, R.raw.color_gray));
+                add(new Word("black", "kululli", R.drawable.color_black, R.raw.color_black));
+                add(new Word("white", "kelelli", R.drawable.color_white, R.raw.color_white));
+                add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow, R.raw.color_dusty_yellow));
+                add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow, R.raw.color_mustard_yellow));
+
             }
         };
 
-        WordAdapter wordAdapter = new WordAdapter(getActivity(), words, R.color.category_numbers);
+        WordAdapter wordAdapter = new WordAdapter(getActivity(), words, R.color.category_colors);
 
         // Get a reference to the ListView, and attach the adapter to the listView.
         ListView listView = (ListView) rootView.findViewById(R.id.word_list);

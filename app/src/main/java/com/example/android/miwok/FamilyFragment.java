@@ -15,7 +15,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-public class NumbersFragment extends Fragment {
+public class FamilyFragment extends Fragment {
 
     //create mediaplayer
     private MediaPlayer mMediaPlayer;
@@ -98,20 +98,21 @@ public class NumbersFragment extends Fragment {
 
         final ArrayList<Word> words = new ArrayList<Word>() {
             {
-                add(new Word("one", "lutti", R.drawable.number_one, R.raw.number_one));
-                add(new Word("two", "otiiko", R.drawable.number_two, R.raw.number_two));
-                add(new Word("three", "tolookosu", R.drawable.number_three, R.raw.number_three));
-                add(new Word("four", "oyyisa", R.drawable.number_four, R.raw.number_four));
-                add(new Word("five", "massokka", R.drawable.number_five, R.raw.number_five));
-                add(new Word("six", "temmokka", R.drawable.number_six, R.raw.number_six));
-                add(new Word("seven", "kenekaku", R.drawable.number_seven, R.raw.number_seven));
-                add(new Word("eight", "kawinta", R.drawable.number_eight, R.raw.number_eight));
-                add(new Word("nine", "wo’e", R.drawable.number_nine, R.raw.number_nine));
-                add(new Word("ten", "na’aacha", R.drawable.number_ten, R.raw.number_ten));
+                add(new Word("father", "әpә", R.drawable.family_father, R.raw.family_father));
+                add(new Word("mother", "әṭa", R.drawable.family_mother, R.raw.family_mother));
+                add(new Word("son", "angsi", R.drawable.family_son, R.raw.family_son));
+                add(new Word("daughter", "tune", R.drawable.family_daughter, R.raw.family_daughter));
+                add(new Word("older brother", "taachi", R.drawable.family_older_brother, R.raw.family_older_brother));
+                add(new Word("younger brother", "chalitti", R.drawable.family_younger_brother, R.raw.family_younger_brother));
+                add(new Word("older sister", "teṭe", R.drawable.family_older_sister, R.raw.family_older_sister));
+                add(new Word("younger sister", "kolliti", R.drawable.family_younger_sister, R.raw.family_younger_sister));
+                add(new Word("grandmother", "ama", R.drawable.family_grandmother, R.raw.family_grandmother));
+                add(new Word("grandfather", "paapa", R.drawable.family_grandfather, R.raw.family_grandfather));
+
             }
         };
 
-        WordAdapter wordAdapter = new WordAdapter(getActivity(), words, R.color.category_numbers);
+        WordAdapter wordAdapter = new WordAdapter(getActivity(), words, R.color.category_family);
 
         // Get a reference to the ListView, and attach the adapter to the listView.
         ListView listView = (ListView) rootView.findViewById(R.id.word_list);

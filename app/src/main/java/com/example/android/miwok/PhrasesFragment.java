@@ -15,7 +15,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-public class NumbersFragment extends Fragment {
+public class PhrasesFragment extends Fragment {
 
     //create mediaplayer
     private MediaPlayer mMediaPlayer;
@@ -98,20 +98,20 @@ public class NumbersFragment extends Fragment {
 
         final ArrayList<Word> words = new ArrayList<Word>() {
             {
-                add(new Word("one", "lutti", R.drawable.number_one, R.raw.number_one));
-                add(new Word("two", "otiiko", R.drawable.number_two, R.raw.number_two));
-                add(new Word("three", "tolookosu", R.drawable.number_three, R.raw.number_three));
-                add(new Word("four", "oyyisa", R.drawable.number_four, R.raw.number_four));
-                add(new Word("five", "massokka", R.drawable.number_five, R.raw.number_five));
-                add(new Word("six", "temmokka", R.drawable.number_six, R.raw.number_six));
-                add(new Word("seven", "kenekaku", R.drawable.number_seven, R.raw.number_seven));
-                add(new Word("eight", "kawinta", R.drawable.number_eight, R.raw.number_eight));
-                add(new Word("nine", "wo’e", R.drawable.number_nine, R.raw.number_nine));
-                add(new Word("ten", "na’aacha", R.drawable.number_ten, R.raw.number_ten));
+                add(new Word("Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));
+                add(new Word("What is your name?", "tinnә oyaase'nә", R.raw.phrase_what_is_your_name));
+                add(new Word("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
+                add(new Word("How are you feeling?", "michәksәs?", R.raw.phrase_how_are_you_feeling));
+                add(new Word("I’m feeling good.", "kuchi achit", R.raw.phrase_im_feeling_good));
+                add(new Word("Are you coming?", "әәnәs'aa?", R.raw.phrase_are_you_coming));
+                add(new Word("Yes, I’m coming.", "hәә’ әәnәm", R.raw.phrase_yes_im_coming));
+                add(new Word("I’m coming.", "әәnәm", R.raw.phrase_im_coming));
+                add(new Word("Let’s go.", "yoowutis", R.raw.phrase_lets_go));
+                add(new Word("Come here.", "әnni'nem", R.raw.phrase_come_here));
             }
         };
 
-        WordAdapter wordAdapter = new WordAdapter(getActivity(), words, R.color.category_numbers);
+        WordAdapter wordAdapter = new WordAdapter(getActivity(), words, R.color.category_phrases);
 
         // Get a reference to the ListView, and attach the adapter to the listView.
         ListView listView = (ListView) rootView.findViewById(R.id.word_list);
