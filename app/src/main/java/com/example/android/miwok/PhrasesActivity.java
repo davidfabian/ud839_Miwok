@@ -76,7 +76,7 @@ public class PhrasesActivity extends AppCompatActivity {
         WordAdapter wordAdapter = new WordAdapter(this, words, R.color.category_phrases);
 
         // Get a reference to the ListView, and attach the adapter to the listView.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = (ListView) findViewById(R.id.word_list);
         listView.setAdapter(wordAdapter);
 
         //set up listener for any item clicked in the generated listview
